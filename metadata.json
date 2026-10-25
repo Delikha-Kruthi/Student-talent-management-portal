@@ -1,0 +1,6 @@
+{
+  "name": "ALWAR POLYTECHNIC - Student Talent Management Portal",
+  "description": "Complete institutional talent management, student project portfolios, faculty rubric evaluation, and client project discovery portal for Alwar Polytechnic.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

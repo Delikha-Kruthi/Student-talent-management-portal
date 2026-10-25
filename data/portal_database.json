@@ -1,0 +1,1170 @@
+{
+  "users": [
+    {
+      "id": "user-student-demo",
+      "email": "student.demo@alwarpolytechnic.demo",
+      "passwordHash": "146ee0899775857f443972967768bdffc8a87c16149d727d2d350dad78dc0a59",
+      "role": "student",
+      "name": "Aarav Choudhary",
+      "status": "active",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "createdAt": "2026-01-15T09:00:00Z",
+      "lastLoginAt": "2026-10-25T08:30:00Z"
+    },
+    {
+      "id": "user-faculty-demo",
+      "email": "faculty.demo@alwarpolytechnic.demo",
+      "passwordHash": "2460cd5c30c95c5093d41936a32cf8b297ad93ada8c54ef994be203b027b7e01",
+      "role": "faculty",
+      "name": "Prof. Devendra Rathore",
+      "status": "active",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+      "createdAt": "2025-08-01T10:00:00Z",
+      "lastLoginAt": "2026-10-25T08:15:00Z"
+    },
+    {
+      "id": "user-client-demo",
+      "email": "client.demo@alwarpolytechnic.demo",
+      "passwordHash": "fd325af34c372823e7c48ed1990d056af90db95639c259dfceea4d212e6f2ffc",
+      "role": "client",
+      "name": "Kavita Singhal",
+      "status": "active",
+      "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150",
+      "createdAt": "2026-02-10T11:00:00Z",
+      "lastLoginAt": "2026-10-25T07:45:00Z"
+    },
+    {
+      "id": "user-admin-demo",
+      "email": "admin.demo@alwarpolytechnic.demo",
+      "passwordHash": "f9ee9b03b3ada24475f826a8611506474e8ec2ac30734c67c0c8c1399ae8c780",
+      "role": "admin",
+      "name": "Chief Administrator Office",
+      "status": "active",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150",
+      "createdAt": "2025-01-01T00:00:00Z",
+      "lastLoginAt": "2026-10-25T09:00:00Z"
+    },
+    {
+      "id": "user-student-2",
+      "email": "priya.sharma@student.alwarpolytechnic.ac.in",
+      "passwordHash": "aceca46f4491ec5143129b8ebf9678f373690f0fe9c054f6f55ed2bb97c0fb18",
+      "role": "student",
+      "name": "Priya Sharma",
+      "status": "active",
+      "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+      "createdAt": "2026-01-16T10:00:00Z"
+    },
+    {
+      "id": "user-student-3",
+      "email": "rohit.meena@student.alwarpolytechnic.ac.in",
+      "passwordHash": "848c034c8672ec881bdef90738c32d5faf2e87cc0df07bca71034648c19eeeaa",
+      "role": "student",
+      "name": "Rohit Meena",
+      "status": "active",
+      "avatarUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150",
+      "createdAt": "2026-01-18T11:00:00Z"
+    },
+    {
+      "id": "user-student-4",
+      "email": "neha.gupta@student.alwarpolytechnic.ac.in",
+      "passwordHash": "1cd9f27480a8a3a75228b15aaefb881a0626435a469ea802f38fbcbd1c5b1d5b",
+      "role": "student",
+      "name": "Neha Gupta",
+      "status": "active",
+      "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150",
+      "createdAt": "2026-01-20T12:00:00Z"
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-cse",
+      "code": "CSE",
+      "name": "Computer Science & Engineering",
+      "description": "Focuses on software engineering, AI, systems, and networked platforms.",
+      "active": true,
+      "headOfDepartment": "Dr. Rajesh Sharma",
+      "semesterCount": 6
+    },
+    {
+      "id": "branch-me",
+      "code": "ME",
+      "name": "Mechanical Engineering",
+      "description": "Covers thermodynamics, CNC machining, robotics, and industrial fabrication.",
+      "active": true,
+      "headOfDepartment": "Prof. Vikram Singh",
+      "semesterCount": 6
+    },
+    {
+      "id": "branch-ce",
+      "code": "CE",
+      "name": "Civil Engineering",
+      "description": "Structural mechanics, surveying, green building design, and smart infrastructure.",
+      "active": true,
+      "headOfDepartment": "Er. Ananya Verma",
+      "semesterCount": 6
+    },
+    {
+      "id": "branch-ee",
+      "code": "EE",
+      "name": "Electrical Engineering",
+      "description": "Power systems, smart grid automation, EV powertrains, and renewable energy.",
+      "active": true,
+      "headOfDepartment": "Dr. Suresh Kumar",
+      "semesterCount": 6
+    },
+    {
+      "id": "branch-ece",
+      "code": "ECE",
+      "name": "Electronics & Communication Engineering",
+      "description": "Embedded IoT controllers, telecommunications, signal processing, and VLSI.",
+      "active": true,
+      "headOfDepartment": "Prof. Meenakshi Joshi",
+      "semesterCount": 6
+    },
+    {
+      "id": "branch-ae",
+      "code": "AE",
+      "name": "Automobile Engineering",
+      "description": "Internal combustion, electric vehicles, vehicle dynamics, and chassis design.",
+      "active": true,
+      "headOfDepartment": "Er. Harpreet Sandhu",
+      "semesterCount": 6
+    },
+    {
+      "id": "branch-che",
+      "code": "CHE",
+      "name": "Chemical Engineering",
+      "description": "Process engineering, industrial polymers, fluid mechanics, and effluent treatment.",
+      "active": true,
+      "headOfDepartment": "Dr. Ritu Saxena",
+      "semesterCount": 6
+    },
+    {
+      "id": "branch-it",
+      "code": "IT",
+      "name": "Information Technology",
+      "description": "Cloud computing, enterprise databases, cybersecurity, and web architectures.",
+      "active": true,
+      "headOfDepartment": "Er. Gaurav Mehta",
+      "semesterCount": 6
+    }
+  ],
+  "studentProfiles": [
+    {
+      "id": "sp-aarav",
+      "userId": "user-student-demo",
+      "pin": "AP-2023-CS-042",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "cgpa": 8.85,
+      "skills": [
+        {
+          "name": "Embedded C++",
+          "level": "Advanced"
+        },
+        {
+          "name": "React & TypeScript",
+          "level": "Expert"
+        },
+        {
+          "name": "Python IoT Systems",
+          "level": "Advanced"
+        },
+        {
+          "name": "PLC Ladder Logic",
+          "level": "Intermediate"
+        }
+      ],
+      "bio": "Final-year Computer Science Diploma student at Alwar Polytechnic. Focused on industrial IoT, smart telemetry, and embedded web micro-controllers.",
+      "githubUrl": "https://github.com/aarav-alwar",
+      "linkedinUrl": "https://linkedin.com/in/aarav-polytechnic",
+      "portfolioVisibility": "public"
+    },
+    {
+      "id": "sp-priya",
+      "userId": "user-student-2",
+      "pin": "AP-2023-CS-043",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "cgpa": 9.1,
+      "skills": [
+        {
+          "name": "Python Computer Vision",
+          "level": "Expert"
+        },
+        {
+          "name": "TensorFlow Lite",
+          "level": "Advanced"
+        },
+        {
+          "name": "FastAPI Backend",
+          "level": "Intermediate"
+        }
+      ],
+      "bio": "Deep learning and edge computing enthusiast. Developing safety monitoring algorithms for industrial fabrication shops.",
+      "portfolioVisibility": "public"
+    },
+    {
+      "id": "sp-rohit",
+      "userId": "user-student-3",
+      "pin": "AP-2023-CS-044",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "cgpa": 7.95,
+      "skills": [
+        {
+          "name": "Database Optimization",
+          "level": "Advanced"
+        },
+        {
+          "name": "Docker & Microservices",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Node.js Express",
+          "level": "Advanced"
+        }
+      ],
+      "bio": "Full stack developer focused on institutional database scaling and high-throughput telemetry pipelines.",
+      "portfolioVisibility": "public"
+    },
+    {
+      "id": "sp-neha",
+      "userId": "user-student-4",
+      "pin": "AP-2023-ME-012",
+      "branchId": "branch-me",
+      "branchName": "Mechanical Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch M1",
+      "cgpa": 8.6,
+      "skills": [
+        {
+          "name": "SolidWorks CAD",
+          "level": "Expert"
+        },
+        {
+          "name": "ANSYS FEA",
+          "level": "Advanced"
+        },
+        {
+          "name": "CNC G-Code Programming",
+          "level": "Advanced"
+        }
+      ],
+      "bio": "Mechanical diploma innovator working on solar hybrid thermal regenerators and lightweight automotive suspension linkages.",
+      "portfolioVisibility": "public"
+    }
+  ],
+  "facultyProfiles": [
+    {
+      "id": "fp-devendra",
+      "userId": "user-faculty-demo",
+      "employeeId": "AP-FAC-108",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "designation": "Senior Lecturer & Project Coordinator",
+      "qualification": "M.Tech (Computer Science & Automation), Ph.D (Pursuing)",
+      "assignedBatches": [
+        "2023-2026 Batch A",
+        "2023-2026 Batch B"
+      ],
+      "approvalStatus": "approved"
+    }
+  ],
+  "clientProfiles": [
+    {
+      "id": "cp-kavita",
+      "userId": "user-client-demo",
+      "organization": "Apex Industrial Systems & Automation Ltd.",
+      "contactNumber": "+91 98290 41234",
+      "industry": "Industrial Automation & Smart Manufacturing",
+      "verified": true
+    }
+  ],
+  "attendanceRecords": [
+    {
+      "id": "att-2026-10-20-AP-2023-CS-042",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-20",
+      "studentId": "user-student-demo",
+      "studentPin": "AP-2023-CS-042",
+      "studentName": "Aarav Choudhary",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-20-AP-2023-CS-043",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-20",
+      "studentId": "user-student-2",
+      "studentPin": "AP-2023-CS-043",
+      "studentName": "Priya Sharma",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-20-AP-2023-CS-044",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-20",
+      "studentId": "user-student-3",
+      "studentPin": "AP-2023-CS-044",
+      "studentName": "Rohit Meena",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-21-AP-2023-CS-042",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-21",
+      "studentId": "user-student-demo",
+      "studentPin": "AP-2023-CS-042",
+      "studentName": "Aarav Choudhary",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-21-AP-2023-CS-043",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-21",
+      "studentId": "user-student-2",
+      "studentPin": "AP-2023-CS-043",
+      "studentName": "Priya Sharma",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-21-AP-2023-CS-044",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-21",
+      "studentId": "user-student-3",
+      "studentPin": "AP-2023-CS-044",
+      "studentName": "Rohit Meena",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-22-AP-2023-CS-042",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-22",
+      "studentId": "user-student-demo",
+      "studentPin": "AP-2023-CS-042",
+      "studentName": "Aarav Choudhary",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-22-AP-2023-CS-043",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-22",
+      "studentId": "user-student-2",
+      "studentPin": "AP-2023-CS-043",
+      "studentName": "Priya Sharma",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-22-AP-2023-CS-044",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-22",
+      "studentId": "user-student-3",
+      "studentPin": "AP-2023-CS-044",
+      "studentName": "Rohit Meena",
+      "status": "absent",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-23-AP-2023-CS-042",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-23",
+      "studentId": "user-student-demo",
+      "studentPin": "AP-2023-CS-042",
+      "studentName": "Aarav Choudhary",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-23-AP-2023-CS-043",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-23",
+      "studentId": "user-student-2",
+      "studentPin": "AP-2023-CS-043",
+      "studentName": "Priya Sharma",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-23-AP-2023-CS-044",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-23",
+      "studentId": "user-student-3",
+      "studentPin": "AP-2023-CS-044",
+      "studentName": "Rohit Meena",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-24-AP-2023-CS-042",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-24",
+      "studentId": "user-student-demo",
+      "studentPin": "AP-2023-CS-042",
+      "studentName": "Aarav Choudhary",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    },
+    {
+      "id": "att-2026-10-24-AP-2023-CS-043",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-24",
+      "studentId": "user-student-2",
+      "studentPin": "AP-2023-CS-043",
+      "studentName": "Priya Sharma",
+      "status": "late",
+      "recordedByFacultyId": "user-faculty-demo",
+      "remarks": "Late arrival - transport delay"
+    },
+    {
+      "id": "att-2026-10-24-AP-2023-CS-044",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "batch": "2023-2026 Batch A",
+      "date": "2026-10-24",
+      "studentId": "user-student-3",
+      "studentPin": "AP-2023-CS-044",
+      "studentName": "Rohit Meena",
+      "status": "present",
+      "recordedByFacultyId": "user-faculty-demo"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-iot-factory-telemetry",
+      "title": "Industrial IoT Telemetry & Vibration Monitoring Gateway",
+      "shortDescription": "Real-time multi-sensor telemetry gateway for CNC vibration, temperature anomalies, and predictive bearing failure alerts.",
+      "problemStatement": "Heavy manufacturing plants in the Alwar Matsya Industrial Area face unplanned downtime due to sudden bearing seize in high-speed CNC spindle shafts.",
+      "proposedSolution": "Developed an edge micro-gateway powered by ESP32 + STM32 communicating via MQTT over TLS to an on-premise dashboard with vibration FFT spectral analysis.",
+      "techStack": [
+        "ESP32 C++",
+        "FastAPI",
+        "React",
+        "MQTT",
+        "TimeScaleDB",
+        "Tailwind CSS"
+      ],
+      "skills": [
+        "Edge Computing",
+        "DSP & FFT",
+        "Industrial Protocols",
+        "Full Stack"
+      ],
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "studentId": "user-student-demo",
+      "studentName": "Aarav Choudhary",
+      "studentPin": "AP-2023-CS-042",
+      "teamMembers": [
+        {
+          "name": "Aarav Choudhary",
+          "pin": "AP-2023-CS-042",
+          "role": "Team Lead & Firmware"
+        },
+        {
+          "name": "Rohit Meena",
+          "pin": "AP-2023-CS-044",
+          "role": "Backend & Database"
+        }
+      ],
+      "visibility": "public",
+      "status": "approved",
+      "price": 15000,
+      "licenseType": "Commercial",
+      "videoUrl": "/uploads/videos/demo_telemetry_walkthrough.mp4",
+      "videoFileName": "demo_telemetry_walkthrough.mp4",
+      "videoSize": 1420580,
+      "documentUrls": [
+        {
+          "name": "Capstone_Project_Report_Alwar_Polytechnic.pdf",
+          "url": "/uploads/docs/report.pdf",
+          "size": 284000
+        }
+      ],
+      "createdAt": "2026-09-10T14:00:00Z",
+      "updatedAt": "2026-10-15T11:30:00Z"
+    },
+    {
+      "id": "proj-ai-safety-ppe",
+      "title": "AI Edge Vision PPE Helmet & Vest Compliance Detector",
+      "shortDescription": "Computer vision camera station mounted at factory entry gates to verify helmet, high-vis jacket, and safety goggles with 98.4% accuracy.",
+      "problemStatement": "Manual safety compliance inspection at factory floor checkpoints is labor-intensive and error-prone, resulting in safety breaches.",
+      "proposedSolution": "Trained YOLOv8-nano on 4,000 industrial workshop images quantized to INT8 running on Raspberry Pi 5 with Coral TPU producing sub-50ms inference.",
+      "techStack": [
+        "Python",
+        "YOLOv8",
+        "OpenCV",
+        "TensorFlow Lite",
+        "React"
+      ],
+      "skills": [
+        "Computer Vision",
+        "Deep Learning",
+        "Embedded Linux"
+      ],
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "studentId": "user-student-2",
+      "studentName": "Priya Sharma",
+      "studentPin": "AP-2023-CS-043",
+      "teamMembers": [
+        {
+          "name": "Priya Sharma",
+          "pin": "AP-2023-CS-043",
+          "role": "Lead Vision Engineer"
+        }
+      ],
+      "visibility": "public",
+      "status": "under_review",
+      "price": 18500,
+      "licenseType": "Academic",
+      "videoUrl": "/uploads/videos/ppe_compliance_demo.mp4",
+      "videoFileName": "ppe_compliance_demo.mp4",
+      "videoSize": 1850000,
+      "documentUrls": [],
+      "createdAt": "2026-10-02T16:00:00Z",
+      "updatedAt": "2026-10-22T09:15:00Z"
+    },
+    {
+      "id": "proj-solar-thermal-chiller",
+      "title": "Dual-Axis Solar Parabolic Concentrator with Thermo-Electric Chiller",
+      "shortDescription": "Mechanical parabolic dish with sun-tracking mechanism coupled to Peltier cooling stages for off-grid vaccine storage in rural health sub-centers.",
+      "problemStatement": "Frequent rural power outages in remote parts of Rajasthan compromise cold-chain vaccine storage temperatures.",
+      "proposedSolution": "Custom-designed dual-axis mechanical tracker utilizing low-cost stepper linkages with a micro-evaporator chamber maintaining 2°C to 8°C continuously.",
+      "techStack": [
+        "SolidWorks",
+        "Arduino Mega",
+        "Peltier Cells",
+        "Solar PV",
+        "Thermodynamics"
+      ],
+      "skills": [
+        "CAD Design",
+        "HVAC & Refrigeration",
+        "Microcontroller Interfacing"
+      ],
+      "branchId": "branch-me",
+      "branchName": "Mechanical Engineering",
+      "studentId": "user-student-4",
+      "studentName": "Neha Gupta",
+      "studentPin": "AP-2023-ME-012",
+      "teamMembers": [
+        {
+          "name": "Neha Gupta",
+          "pin": "AP-2023-ME-012",
+          "role": "Mechanical Fabrication & Thermal Analysis"
+        }
+      ],
+      "visibility": "public",
+      "status": "approved",
+      "price": 22000,
+      "licenseType": "Commercial",
+      "videoUrl": "/uploads/videos/solar_chiller_demo.mp4",
+      "videoFileName": "solar_chiller_demo.mp4",
+      "videoSize": 2150000,
+      "documentUrls": [],
+      "createdAt": "2026-09-18T10:00:00Z",
+      "updatedAt": "2026-10-14T17:00:00Z"
+    }
+  ],
+  "rubricTemplates": [
+    {
+      "id": "rubric-polytechnic-standard",
+      "name": "Alwar Polytechnic Capstone Engineering Rubric",
+      "branchName": "Institutional Universal",
+      "isDefault": true,
+      "createdBy": "Academic Council",
+      "criteria": [
+        {
+          "id": "c1",
+          "name": "Problem Understanding & Scope",
+          "description": "Clarity of the real-world engineering problem and alignment with diploma standards.",
+          "weight": 15,
+          "maxScore": 10
+        },
+        {
+          "id": "c2",
+          "name": "Functionality & Implementation",
+          "description": "Degree of operational completeness, working hardware/software deliverables, and execution.",
+          "weight": 25,
+          "maxScore": 10
+        },
+        {
+          "id": "c3",
+          "name": "Code/Design Quality & Architecture",
+          "description": "Adherence to engineering design standards, code modularity, circuit safety, and robustness.",
+          "weight": 15,
+          "maxScore": 10
+        },
+        {
+          "id": "c4",
+          "name": "Innovation & Technical Creativity",
+          "description": "Novelty in problem-solving, optimization, or ingenious resource utilization.",
+          "weight": 15,
+          "maxScore": 10
+        },
+        {
+          "id": "c5",
+          "name": "Testing, Validation & Safety",
+          "description": "Evidence of systematic testing, error handling, performance benchmarks, and stress testing.",
+          "weight": 15,
+          "maxScore": 10
+        },
+        {
+          "id": "c6",
+          "name": "Documentation, Presentation & Demo",
+          "description": "Technical report quality, diagram accuracy, demonstration video, and viva readiness.",
+          "weight": 15,
+          "maxScore": 10
+        }
+      ]
+    }
+  ],
+  "rubricEvaluations": [
+    {
+      "id": "eval-telemetry-01",
+      "projectId": "proj-iot-factory-telemetry",
+      "projectTitle": "Industrial IoT Telemetry & Vibration Monitoring Gateway",
+      "studentId": "user-student-demo",
+      "rubricTemplateId": "rubric-polytechnic-standard",
+      "evaluatorFacultyId": "user-faculty-demo",
+      "evaluatorName": "Prof. Devendra Rathore",
+      "criterionScores": [
+        {
+          "criterionId": "c1",
+          "criterionName": "Problem Understanding & Scope",
+          "weight": 15,
+          "score": 9.5,
+          "comment": "Exceptional grounding in local Matsya industrial machining challenges."
+        },
+        {
+          "criterionId": "c2",
+          "criterionName": "Functionality & Implementation",
+          "weight": 25,
+          "score": 9,
+          "comment": "Fully functional edge gateway with real sensor feeds and responsive UI."
+        },
+        {
+          "criterionId": "c3",
+          "criterionName": "Code/Design Quality & Architecture",
+          "weight": 15,
+          "score": 8.5,
+          "comment": "Well-modularized firmware and clean REST API structure."
+        },
+        {
+          "criterionId": "c4",
+          "criterionName": "Innovation & Technical Creativity",
+          "weight": 15,
+          "score": 9,
+          "comment": "Creative FFT vibration windowing implemented directly on the microcontroller."
+        },
+        {
+          "criterionId": "c5",
+          "criterionName": "Testing, Validation & Safety",
+          "weight": 15,
+          "score": 8.5,
+          "comment": "Tested on actual lathe and CNC testbeds under 48-hour continuous load."
+        },
+        {
+          "criterionId": "c6",
+          "criterionName": "Documentation, Presentation & Demo",
+          "weight": 15,
+          "score": 9.2,
+          "comment": "Comprehensive project report, clear wiring diagrams, and high-clarity video walkthrough."
+        }
+      ],
+      "totalScore": 89.55,
+      "overallFeedback": "Outstanding work. One of the highest-rated capstone projects from the Department of Computer Science & Engineering this academic year. Ready for commercial pilot testing.",
+      "recommendation": "approve",
+      "publishedToStudent": true,
+      "evaluatedAt": "2026-10-15T11:00:00Z"
+    }
+  ],
+  "projectReviews": [],
+  "clientIdeas": [
+    {
+      "id": "idea-apex-01",
+      "clientId": "user-client-demo",
+      "clientName": "Kavita Singhal",
+      "organization": "Apex Industrial Systems & Automation Ltd.",
+      "title": "Smart Automated Guided Vehicle (AGV) Warehouse Navigation Controller",
+      "description": "We require a low-cost LiDAR-guided AGV controller for warehouse pallet transportation. It must support obstacle avoidance, line following fallback, battery health telemetry, and safety bumper emergency stop.",
+      "targetBranch": "Computer Science & Engineering",
+      "estimatedBudget": "₹45,000 - ₹60,000",
+      "aiAnalysis": {
+        "summary": "Industrial automated guided vehicle control system combining 2D LiDAR SLAM with emergency safety interlocking.",
+        "suggestedFeatures": [
+          "2D LiDAR map navigation with ROS 2 micro-nodes",
+          "Magnetic tape line-following secondary redundancy",
+          "CAN bus interface for brushless motor drivers",
+          "Cloud telemetry for fleet dispatch and battery state-of-charge"
+        ],
+        "suggestedTechStack": [
+          "ROS 2 Humble",
+          "C++",
+          "ESP32",
+          "CAN Bus",
+          "WebRTC Video Stream"
+        ],
+        "clarifyingQuestions": [
+          "What is the maximum payload weight requirement for the chassis?",
+          "Is the warehouse floor flat concrete, or are there ramp transitions?"
+        ],
+        "feasibilityRating": "High - Excellent match for final-year CSE & ME joint teams",
+        "suggestedBranches": [
+          "Computer Science & Engineering",
+          "Mechanical Engineering"
+        ]
+      },
+      "status": "submitted",
+      "createdAt": "2026-10-18T14:30:00Z",
+      "updatedAt": "2026-10-18T15:00:00Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-01",
+      "senderId": "user-client-demo",
+      "senderName": "Kavita Singhal (Apex Industrial Systems)",
+      "senderRole": "client",
+      "receiverId": "user-student-demo",
+      "receiverName": "Aarav Choudhary",
+      "projectId": "proj-iot-factory-telemetry",
+      "projectTitle": "Industrial IoT Telemetry & Vibration Monitoring Gateway",
+      "content": "Hello Aarav, we reviewed your telemetry gateway demo video and project report. We are impressed with the FFT vibration analysis and would like to test the deliverable package on our CNC machines next Monday.",
+      "read": true,
+      "createdAt": "2026-10-22T14:30:00Z"
+    },
+    {
+      "id": "msg-02",
+      "senderId": "user-student-demo",
+      "senderName": "Aarav Choudhary",
+      "senderRole": "student",
+      "receiverId": "user-client-demo",
+      "receiverName": "Kavita Singhal (Apex Industrial Systems)",
+      "projectId": "proj-iot-factory-telemetry",
+      "projectTitle": "Industrial IoT Telemetry & Vibration Monitoring Gateway",
+      "content": "Thank you Ms. Singhal! The complete deliverable package including the flashed firmware binaries and PCB schematics is available under your Purchases tab. I am available for any remote deployment walkthrough.",
+      "read": true,
+      "createdAt": "2026-10-22T15:00:00Z"
+    },
+    {
+      "id": "msg-03",
+      "senderId": "user-faculty-demo",
+      "senderName": "Prof. Devendra Rathore",
+      "senderRole": "faculty",
+      "receiverId": "user-student-demo",
+      "receiverName": "Aarav Choudhary",
+      "projectId": "proj-iot-factory-telemetry",
+      "projectTitle": "Industrial IoT Telemetry & Vibration Monitoring Gateway",
+      "content": "Aarav, your rubric evaluation has been completed and published. You scored 89.65/100. Excellent performance on your capstone demonstration.",
+      "read": false,
+      "createdAt": "2026-10-24T17:15:00Z"
+    }
+  ],
+  "notices": [
+    {
+      "id": "notice-polytechnic-01",
+      "title": "Annual Institutional Project Expo & Industry Showcase 2026",
+      "content": "The Board of Governors and Academic Council announce the Annual Project Expo scheduled for November 12, 2026. All final-semester students with approved projects must submit demonstration video links and presentation posters by November 5.",
+      "priority": "urgent",
+      "targetRoles": [
+        "all"
+      ],
+      "createdBy": "user-admin-demo",
+      "authorName": "Academic Directorate",
+      "authorRole": "Administrator",
+      "publishedAt": "2026-10-20T09:00:00Z",
+      "updatedAt": "2026-10-20T09:00:00Z"
+    },
+    {
+      "id": "notice-polytechnic-02",
+      "title": "Rubric Evaluation Submission Guidelines for Faculty Evaluators",
+      "content": "All faculty project coordinators are requested to complete mid-term rubric reviews via the portal by October 30. Please ensure all 6 criteria scores are saved with constructive comments before publishing results to students.",
+      "priority": "high",
+      "targetRoles": [
+        "faculty"
+      ],
+      "createdBy": "user-admin-demo",
+      "authorName": "Dean of Academics",
+      "authorRole": "Administrator",
+      "publishedAt": "2026-10-22T11:00:00Z",
+      "updatedAt": "2026-10-22T11:00:00Z"
+    },
+    {
+      "id": "notice-polytechnic-03",
+      "title": "Industry Client Idea Submissions for Capstone Sponsorship",
+      "content": "Registered industrial partners can now submit problem statements directly in the Client Idea Studio. Faculty and student teams will be matched for sponsored development and intellectual property licensing.",
+      "priority": "normal",
+      "targetRoles": [
+        "client",
+        "faculty"
+      ],
+      "createdBy": "user-admin-demo",
+      "authorName": "Industry Relations Cell",
+      "authorRole": "Administrator",
+      "publishedAt": "2026-10-24T14:00:00Z",
+      "updatedAt": "2026-10-24T14:00:00Z"
+    }
+  ],
+  "complaints": [
+    {
+      "id": "comp-01",
+      "ticketNumber": "GRV-2026-001",
+      "userId": "user-student-demo",
+      "userName": "Aarav Choudhary",
+      "userRole": "student",
+      "userEmail": "student.demo@alwarpolytechnic.demo",
+      "category": "facility",
+      "subject": "IoT Hardware Lab Oscilloscope Calibration & High-Speed Logic Analyzer Access",
+      "description": "The 4-channel digital oscilloscope in Lab 3 has channel 2 offset drifting by 450mV. We need it recalibrated for precise UART/CAN bus baud rate rise-time verification.",
+      "priority": "medium",
+      "status": "resolved",
+      "resolutionNote": "Lab technician Er. Sunil Sharma inspected and recalibrated the Tektronix DSO on Oct 24. Channel 2 voltage reference verified with standard 1kHz square wave.",
+      "resolvedBy": "Chief Administrator Office",
+      "resolvedAt": "2026-10-24T16:00:00Z",
+      "createdAt": "2026-10-21T10:00:00Z",
+      "updatedAt": "2026-10-24T16:00:00Z"
+    },
+    {
+      "id": "comp-02",
+      "ticketNumber": "GRV-2026-002",
+      "userId": "user-student-2",
+      "userName": "Priya Sharma",
+      "userRole": "student",
+      "userEmail": "priya.sharma@student.alwarpolytechnic.ac.in",
+      "category": "technical",
+      "subject": "GPU Server Compute Node Availability for Edge Model Quantization",
+      "description": "Requesting extended batch compute slots on the department workstation for INT8 quantization benchmarking after 5 PM.",
+      "priority": "high",
+      "status": "in_progress",
+      "createdAt": "2026-10-24T15:30:00Z",
+      "updatedAt": "2026-10-25T08:00:00Z"
+    }
+  ],
+  "purchases": [
+    {
+      "id": "ord-2026-1001",
+      "orderNumber": "AP-ORD-7749",
+      "projectId": "proj-iot-factory-telemetry",
+      "projectTitle": "Industrial IoT Telemetry & Vibration Monitoring Gateway",
+      "studentId": "user-student-demo",
+      "studentName": "Aarav Choudhary",
+      "studentPin": "AP-2023-CS-042",
+      "clientId": "user-client-demo",
+      "clientName": "Kavita Singhal",
+      "clientOrganization": "Apex Industrial Systems & Automation Ltd.",
+      "amount": 15000,
+      "licenseType": "Commercial Non-Exclusive",
+      "status": "completed",
+      "licenseKey": "LIC-AP-2026-CSE-99824-AARAV",
+      "downloadUrl": "/api/purchases/ord-2026-1001/download",
+      "deliverableFiles": [
+        "firmware_esp32_v1.2.bin",
+        "source_code_full_repo.zip",
+        "pcb_schematics_gerber_files.zip",
+        "operational_manual_and_api_docs.pdf"
+      ],
+      "createdAt": "2026-10-22T10:15:00Z"
+    }
+  ],
+  "auditLogs": [],
+  "serviceListings": [
+    {
+      "id": "srv-esp32-telemetry",
+      "studentId": "user-student-demo",
+      "studentName": "Aarav Choudhary",
+      "studentPin": "AP-2023-CS-042",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "title": "Custom ESP32 / STM32 Industrial Telemetry Firmware & MQTT Gateway",
+      "description": "I will write modular, robust C++ firmware for ESP32 and STM32 microcontrollers with real-time sensor polling (I2C/SPI), MQTT over TLS, and watchdog fail-safes for factory telemetry.",
+      "skills": [
+        "Embedded C++",
+        "ESP32",
+        "MQTT",
+        "FreeRTOS",
+        "Industrial Sensors"
+      ],
+      "price": 4500,
+      "deliveryDays": 5,
+      "portfolioSamples": [
+        {
+          "title": "CNC Spindle Vibration Telemetry Demo",
+          "url": "/uploads/videos/demo_telemetry_walkthrough.mp4"
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 7,
+      "status": "active",
+      "createdAt": "2026-09-20T10:00:00Z"
+    },
+    {
+      "id": "srv-cv-ppe-inspection",
+      "studentId": "user-student-2",
+      "studentName": "Priya Sharma",
+      "studentPin": "AP-2023-CS-043",
+      "branchId": "branch-cse",
+      "branchName": "Computer Science & Engineering",
+      "title": "Edge AI Computer Vision Model Quantization & Workshop Camera Setup",
+      "description": "I will train and quantize YOLOv8 or MobileNet models to INT8 running at 30+ FPS on Raspberry Pi or Jetson for factory safety compliance, defect sorting, or worker helmet inspection.",
+      "skills": [
+        "Python",
+        "OpenCV",
+        "TensorFlow Lite",
+        "YOLOv8",
+        "Edge AI"
+      ],
+      "price": 6000,
+      "deliveryDays": 7,
+      "portfolioSamples": [
+        {
+          "title": "PPE Helmet & Vest Inspection Video",
+          "url": "/uploads/videos/ppe_compliance_demo.mp4"
+        }
+      ],
+      "rating": 5,
+      "reviewCount": 4,
+      "status": "active",
+      "createdAt": "2026-09-28T14:00:00Z"
+    },
+    {
+      "id": "srv-cad-3d-modeling",
+      "studentId": "user-student-4",
+      "studentName": "Neha Gupta",
+      "studentPin": "AP-2023-ME-012",
+      "branchId": "branch-me",
+      "branchName": "Mechanical Engineering",
+      "title": "SolidWorks 3D CAD Modeling, Assembly Schematics & CNC G-Code Export",
+      "description": "Complete mechanical CAD drafting, kinematic assembly validation, thermal stress simulation, and DXF/STEP files for rapid sheet-metal and CNC manufacturing.",
+      "skills": [
+        "SolidWorks",
+        "ANSYS",
+        "CNC G-Code",
+        "Kinematics",
+        "3D CAD"
+      ],
+      "price": 3500,
+      "deliveryDays": 4,
+      "portfolioSamples": [
+        {
+          "title": "Solar Dual-Axis Linkage Mechanism",
+          "url": "/uploads/videos/solar_chiller_demo.mp4"
+        }
+      ],
+      "rating": 4.8,
+      "reviewCount": 6,
+      "status": "active",
+      "createdAt": "2026-10-01T11:00:00Z"
+    }
+  ],
+  "serviceOrders": [
+    {
+      "id": "ord-srv-101",
+      "orderNumber": "ORD-LE-2026-881",
+      "serviceId": "srv-esp32-telemetry",
+      "serviceTitle": "Custom ESP32 / STM32 Industrial Telemetry Firmware",
+      "studentId": "user-student-demo",
+      "studentName": "Aarav Choudhary",
+      "studentPin": "AP-2023-CS-042",
+      "clientId": "user-client-demo",
+      "clientName": "Kavita Singhal",
+      "clientOrganization": "Apex Industrial Systems & Automation Ltd.",
+      "amount": 4500,
+      "scopeDetails": "Develop firmware to sample 4 PT100 temperature probes via MAX31865 over SPI and publish JSON alerts to AWS IoT Core broker every 500ms.",
+      "deadline": "2026-11-02",
+      "status": "in_progress",
+      "deliverableNotes": "Draft hardware HAL and SPI driver completed. Final MQTT publish loop under integration testing.",
+      "deliverableFiles": [
+        "esp32_max31865_hal_v1.ino"
+      ],
+      "paymentStatus": "verified_demo",
+      "createdAt": "2026-10-20T10:00:00Z",
+      "updatedAt": "2026-10-24T16:00:00Z"
+    }
+  ],
+  "studyPlans": [
+    {
+      "id": "plan-aarav-sem5",
+      "studentId": "user-student-demo",
+      "branchName": "Computer Science & Engineering",
+      "semester": 5,
+      "examTargetDate": "2026-11-25",
+      "weakTopics": [
+        "Database B-Tree Indexing",
+        "SQL Query Optimization",
+        "Relational Normalization"
+      ],
+      "totalWeeklyHours": 14,
+      "generatedByAi": true,
+      "savedAt": "2026-10-24T11:00:00Z",
+      "weeklySchedule": [
+        {
+          "day": "Monday",
+          "focusSubject": "Relational Database Management Systems (CS-503)",
+          "hours": 2,
+          "tasks": [
+            "Read 3NF and BCNF normalization rules",
+            "Solve 4 previous exam problems on functional dependencies"
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "focusSubject": "Microcontrollers & Embedded Systems (CS-501)",
+          "hours": 2,
+          "tasks": [
+            "Review Timer 1 CTC mode register configurations",
+            "Practice interrupt service routine coding"
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "focusSubject": "Relational Database Management Systems (CS-503)",
+          "hours": 2,
+          "tasks": [
+            "Analyze query execution plans with EXPLAIN",
+            "Implement composite B-Tree indexes on test SQLite database"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "focusSubject": "Industrial IoT & Automation Protocols (CS-502)",
+          "hours": 2,
+          "tasks": [
+            "Compare MQTT QoS 0, 1, 2 bandwidth footprints",
+            "Review TLS certificate handshake sequence"
+          ]
+        },
+        {
+          "day": "Friday",
+          "focusSubject": "Capstone Project Viva Defense Practice",
+          "hours": 2,
+          "tasks": [
+            "Practice 5-minute technical pitch for telemetry gateway",
+            "Recheck wiring diagrams and test results"
+          ]
+        },
+        {
+          "day": "Saturday",
+          "focusSubject": "Weak Topic Intensive: Query Optimization",
+          "hours": 3,
+          "tasks": [
+            "Complete mock test paper on database indexing",
+            "Self-grade using polytechnic model answer keys"
+          ]
+        },
+        {
+          "day": "Sunday",
+          "focusSubject": "Weekly Review & Buffer",
+          "hours": 1,
+          "tasks": [
+            "Summarize 1-page formula cheatsheet for upcoming internal tests"
+          ]
+        }
+      ]
+    }
+  ],
+  "academicAssessments": [
+    {
+      "id": "asm-aarav-cs501",
+      "studentId": "user-student-demo",
+      "studentPin": "AP-2023-CS-042",
+      "subjectCode": "CS-501",
+      "subjectName": "Microcontrollers & Embedded Systems",
+      "semester": 5,
+      "internalScore": 28,
+      "midTermScore": 27,
+      "practicalScore": 38,
+      "totalScore": 93,
+      "recordedByFacultyId": "user-faculty-demo",
+      "remarks": "Exceptional firmware optimization and timing accuracy.",
+      "assessmentDate": "2026-10-10"
+    },
+    {
+      "id": "asm-aarav-cs502",
+      "studentId": "user-student-demo",
+      "studentPin": "AP-2023-CS-042",
+      "subjectCode": "CS-502",
+      "subjectName": "Industrial IoT & Automation Protocols",
+      "semester": 5,
+      "internalScore": 26,
+      "midTermScore": 25,
+      "practicalScore": 36,
+      "totalScore": 87,
+      "recordedByFacultyId": "user-faculty-demo",
+      "remarks": "Good grasp of MQTT brokers and TLS security.",
+      "assessmentDate": "2026-10-12"
+    },
+    {
+      "id": "asm-aarav-cs503",
+      "studentId": "user-student-demo",
+      "studentPin": "AP-2023-CS-042",
+      "subjectCode": "CS-503",
+      "subjectName": "Relational Database Management Systems",
+      "semester": 5,
+      "internalScore": 19,
+      "midTermScore": 18,
+      "practicalScore": 26,
+      "totalScore": 63,
+      "recordedByFacultyId": "user-faculty-demo",
+      "remarks": "Needs revision on database indexing and query normalization.",
+      "assessmentDate": "2026-10-14"
+    }
+  ]
+}

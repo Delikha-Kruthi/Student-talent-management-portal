@@ -1,0 +1,1004 @@
+# MASTER PROMPT: BUILD THE COMPLETE ALWAR POLYTECHNIC STUDENT TALENT MANAGEMENT PORTAL FROM SCRATCH TO FINISH
+
+Act as a senior full-stack software engineer, UI/UX designer, database architect, security engineer, and QA tester. Build a complete, production-structured web application named **ALWAR POLYTECHNIC — STUDENT TALENT MANAGEMENT PORTAL**.
+
+Build the entire application from the beginning, including frontend, backend, database, authentication, file storage, APIs, role-based dashboards, all required features, testing, and setup documentation.
+
+This is a full-stack development task, not a request for a design mockup or an explanation. Generate and connect the actual source code. Run the available checks, fix errors, and deliver a working application.
+
+Do not leave buttons decorative, pages empty, APIs disconnected, or database operations simulated. Do not claim that a feature works unless it has been implemented and tested.
+
+If the environment has usage or output limits, prioritize a complete, working core application and continue implementing the remaining requirements in the same project. Do not replace the application with disconnected example components.
+
+# 1. PROJECT PURPOSE
+
+The portal is for Alwar Polytechnic and must support **all configured institutional branches and departments**, not only Computer Engineering.
+
+The platform combines:
+
+- Student registration and profiles.
+- Student skills and project portfolios.
+- Faculty and academic management.
+- Student records and attendance.
+- Project submission and Faculty approval.
+- A project marketplace for Clients.
+- Client project ideas and project requests.
+- Direct project demonstration video uploads and playback.
+- A rubric-based project evaluation system.
+- Notices and institutional circulars.
+- Complaints and grievance management.
+- Project-related messaging.
+- Purchases, licensing records, and authorized deliverable downloads.
+- An optional AI-assisted project idea feature.
+
+The system must use actual database records, real authorization, persistent uploads, and properly connected frontend and backend functionality.
+
+# 2. TECHNOLOGY STACK
+
+Use a compatible, maintainable stack.
+
+## Frontend
+
+- React.
+- TypeScript.
+- Vite.
+- Tailwind CSS.
+- React Router.
+- Framer Motion for restrained animations.
+- Lucide icons.
+- Recharts only for useful data visualization.
+- React Hook Form and Zod, or equivalent form validation.
+
+## Backend
+
+- Python FastAPI.
+- REST APIs with consistent JSON responses.
+- SQLAlchemy ORM.
+- Alembic database migrations.
+- Pydantic validation.
+- WebSockets only where required for real-time messaging.
+
+## Database
+
+Use PostgreSQL for deployment. SQLite may be supported for local development if appropriate.
+
+Create a proper relational schema with foreign keys, constraints, indexes, timestamps, and migrations.
+
+## File storage
+
+Support persistent local storage for development and configurable object storage for production.
+
+Uploaded files must remain accessible after refresh, logout/login, and reopening the associated record. Do not use temporary browser object URLs as permanent storage references.
+
+## Configuration
+
+Create a `.env.example` containing placeholders for database credentials, application secrets, frontend/backend URLs, file storage, and optional third-party services.
+
+Never hardcode private API keys into frontend code or commit real credentials.
+
+If the coding environment requires another stack, explain the limitation and implement the closest fully working equivalent rather than generating incompatible code.
+
+# 3. DESIGN AND VISUAL IDENTITY
+
+Create a professional, modern institutional website.
+
+### Brand
+
+**ALWAR POLYTECHNIC**
+
+**Student Talent Management Portal**
+
+Do not use “Computer Engineering Portal” as the overall institutional tagline.
+
+### Color palette
+
+- Deep navy: `#0B192C`
+- Cyan: `#00D4F5`
+- White: `#FFFFFF`
+- Supporting blue, slate, and neutral tones.
+
+Use subtle linear gradients, polished cards, restrained glassmorphism, clear typography, accessible contrast, and smooth transitions.
+
+### Design rules
+
+- The first page must be the Signup/Login page.
+- Do not create a separate marketing landing page before authentication.
+- Do not use large 3D scenes, a large animated orb, or heavy visual effects on the first page.
+- Keep the design responsive on mobile, tablet, and desktop.
+- Do not overwhelm users with excessive charts, statistics, model information, duplicate cards, or unnecessary tabs.
+- Keep navigation compact and role-specific.
+- Add real loading, success, empty, and error states.
+- Every button must have a meaningful action.
+- Every navigation item must open its intended page.
+- Use a consistent page header and a working backward arrow (`←`) on inner pages.
+
+# 4. FIRST PAGE: SIGNUP AND LOGIN
+
+When the application opens, display the authentication interface directly.
+
+Include:
+
+- Institutional branding.
+- Login and Signup switching.
+- Email or configured username.
+- Password.
+- Show/hide password control.
+- Login button.
+- Signup button.
+- Forgot Password if implemented.
+- Role selection during registration.
+- An expandable **Explore Demo Accounts** section in development mode.
+
+## Student registration
+
+Fields:
+
+- Full name.
+- Email.
+- Password.
+- Student ID/PIN.
+- Branch/department.
+- Semester.
+- Class/batch where applicable.
+
+## Faculty registration
+
+Fields:
+
+- Full name.
+- Email.
+- Password.
+- Employee ID.
+- Branch/department.
+- Qualification where required.
+
+New Faculty accounts may require institutional approval.
+
+## Client registration
+
+Fields:
+
+- Name.
+- Email.
+- Password.
+- Organization, optional where appropriate.
+
+## Administrator accounts
+
+Do not permit unrestricted public Administrator registration.
+
+Create Administrators through a secure seed script or an authorized invitation process.
+
+## Demo accounts
+
+Create working development/demo accounts in the database:
+
+- Student: `student.demo@alwarpolytechnic.demo` / `Student@123`
+- Faculty: `faculty.demo@alwarpolytechnic.demo` / `Faculty@123`
+- Client: `client.demo@alwarpolytechnic.demo` / `Client@123`
+- Administrator: `admin.demo@alwarpolytechnic.demo` / `Admin@123`
+
+Provide a working **Use Demo Account** button for each account. Clicking it must populate the login form with the corresponding credentials. The user must still click Login.
+
+Seed demo accounts idempotently to avoid duplicates.
+
+Show demo credentials only in development/demo mode. Disable public demo credentials in production.
+
+# 5. AUTHENTICATION AND ACCOUNT ACTIVATION
+
+Implement secure authentication and role-based authorization.
+
+Requirements:
+
+- Hash passwords using Argon2id or another suitable secure password-hashing algorithm.
+- Use secure session management or correctly implemented access/refresh tokens.
+- Use appropriate cookie security settings when cookies are used.
+- Enforce permissions in the backend, not only in the frontend.
+- Validate all input.
+- Rate-limit sensitive authentication endpoints.
+- Prevent users from changing their role simply by modifying frontend data.
+- Protect private pages and APIs.
+- Provide readable errors for failed login and registration.
+
+## Email OTP issue
+
+Do not require an email verification code when email delivery is not configured.
+
+The Faculty demo account must work without email OTP.
+
+Do not show “Code sent to email” unless the email service confirms successful delivery.
+
+If no email provider is configured:
+
+- Allow the appropriate registration flow to complete without an unusable OTP step.
+- Keep Faculty approval requirements where applicable.
+- Clearly display pending activation or approval status.
+- Never ask a user to enter a code that was never delivered.
+
+If email verification is implemented, configure the provider and test actual delivery. Do not fake verification.
+
+## Role-based redirects
+
+- Student → Student Dashboard.
+- Faculty → Faculty Dashboard or Pending Approval page.
+- Client → Client Dashboard.
+- Administrator → Administrator Dashboard.
+
+New accounts must have their required profile records created. A newly registered user with no projects or activity must see a useful empty state rather than a blank page.
+
+# 6. ROLE-SPECIFIC NAVIGATION
+
+Use exactly these main navigation groups unless a necessary feature requires a small, justified addition.
+
+## Student
+
+1. Dashboard.
+2. My Portfolio.
+3. Find Projects.
+4. My Applications.
+5. Messages.
+6. Notices.
+7. Complaints.
+8. Profile & Settings.
+
+## Faculty
+
+1. Dashboard.
+2. My Students.
+3. Attendance.
+4. Project Reviews.
+5. Notices.
+6. Profile.
+
+## Client
+
+1. Dashboard.
+2. Idea Studio.
+3. Discover Projects.
+4. My Requests.
+5. Purchases.
+6. Messages.
+7. Profile & Settings.
+
+## Administrator
+
+1. Dashboard.
+2. User Management.
+3. Project Moderation.
+4. Notices.
+5. Complaints.
+6. Transactions.
+7. Security Logs.
+8. Settings.
+
+Each navigation item must load a different, relevant page with the correct data. Do not duplicate the same dashboard content across tabs.
+
+# 7. STUDENT DASHBOARD AND PORTFOLIO
+
+Build a personalized dashboard using actual records belonging to the logged-in student.
+
+Show useful information, such as:
+
+- Welcome message.
+- Portfolio completion, if calculated from actual fields.
+- Approved projects.
+- Project review status.
+- Applications or project requests.
+- Notices.
+- Attendance, if recorded.
+- Recent messages.
+- Complaint status.
+
+Do not invent attendance percentages, CGPA, earnings, projects, or student activity.
+
+## My Portfolio
+
+Allow students to:
+
+- Create and edit their profiles.
+- Choose their configured branch and semester.
+- Add skills and proficiency levels.
+- Add projects and technology stacks.
+- Upload project documentation.
+- Upload project demonstration videos directly.
+- Submit projects for Faculty review.
+- View evaluation results and feedback when authorized.
+- Publish approved projects where permitted.
+- Control profile and project visibility.
+
+Private student data must not be exposed publicly.
+
+# 8. FACULTY DASHBOARD AND STUDENT MANAGEMENT
+
+Keep the Faculty interface simple, practical, and focused on academic work.
+
+## Faculty Dashboard
+
+Display only useful, real information:
+
+- Assigned students.
+- Pending project reviews.
+- Attendance tasks.
+- Relevant notices.
+- Recent academic activity.
+
+If no data exists, show a clear empty state.
+
+## My Students
+
+The page must open correctly and retrieve actual student records.
+
+Display available fields such as:
+
+- Student name.
+- Student ID/PIN.
+- Branch.
+- Semester.
+- Class/batch.
+- Enrollment status.
+
+Provide search, appropriate filters, and a working student details page.
+
+Add a visible **Add Student** button.
+
+## Add Student form
+
+Include fields supported by the database:
+
+- Full name.
+- Student ID/PIN.
+- Email where available.
+- Branch.
+- Semester.
+- Class/batch.
+- Enrollment status.
+
+Validate inputs, reject duplicate student IDs, save records to the database, and refresh the list after successful creation.
+
+Respect permissions. If Faculty can add academic student records but cannot create login accounts, implement these as separate operations. Apply Administrator approval if required by institutional policy.
+
+Faculty must only access students assigned to their authorized classes, branches, or batches.
+
+## Attendance
+
+Implement:
+
+- Attendance entry for authorized classes.
+- Attendance history.
+- Filters by date, branch, class, and student.
+- Percentages calculated from saved records.
+- Warnings for attendance below the configured threshold.
+
+Do not hardcode sample attendance data as real data.
+
+# 9. CLIENT DASHBOARD — KEEP IT SIMPLE
+
+Clients must see only information useful for requesting projects, discovering talent, and managing purchases.
+
+## Dashboard
+
+Display:
+
+- Welcome message.
+- Active request count from actual records.
+- Purchase count from actual records.
+- Recent requests.
+- A few approved projects, if available.
+- A clear **Describe an Idea** button.
+
+Do not show excessive analytics, model telemetry, repeated cards, or unnecessary technical information.
+
+## Discover Projects
+
+Show approved projects from the database with:
+
+- Project title.
+- Short description.
+- Technologies.
+- Public student/team information where permitted.
+- Price, if listed.
+- View Details button.
+
+Add search and relevant filters.
+
+## My Requests
+
+Display the logged-in Client's actual submitted ideas, statuses, dates, and detail links.
+
+## Purchases
+
+Show real purchase records, order status, license details, and authorized downloads.
+
+## Messages
+
+Show actual conversations and support project-related messaging.
+
+## Profile & Settings
+
+Include only functional options such as profile editing, password change, supported notification settings, and logout.
+
+# 10. CLIENT IDEA STUDIO — SINGLE PAGE ONLY
+
+The Idea Studio must contain **only one main workflow page: Describe My Idea**.
+
+Do not add separate tabs for:
+
+- AI Understanding.
+- Web Research.
+- Visuals.
+- Video Storyboard.
+- Student Matches.
+- Licensing.
+
+Do not leave disabled tabs or decorative navigation.
+
+## Page interface
+
+Include:
+
+- Heading: **Describe Your Project Idea**.
+- Brief instructions.
+- Large text area.
+- Optional microphone button for speech-to-text.
+- Optional supporting document or sketch upload.
+- **Submit Idea** or **Analyze Idea** button.
+- **Save Draft** button if implemented.
+- Request status.
+- Backward arrow.
+
+## Functionality
+
+- Validate the description.
+- Save drafts to the database.
+- Preserve drafts after refresh and login.
+- Submit ideas to the backend.
+- Show success only after the backend confirms the operation.
+- Provide a link to view saved requests under My Requests.
+- Show clear errors when saving fails.
+
+Optional AI analysis can produce a structured summary, suggested features, technology ideas, and clarifying questions. It must not add more Idea Studio tabs.
+
+If AI is unavailable, basic idea submission must still work. Clearly state when AI analysis is unavailable. Do not pretend a model generated content when it did not.
+
+# 11. PROJECT CREATION
+
+Create an Add New Project form with:
+
+- Project title.
+- Description.
+- Problem statement.
+- Proposed solution.
+- Technology stack.
+- Skills.
+- Branch and team information where applicable.
+- Project visibility.
+- License or price preference where marketplace publishing is enabled.
+- Optional demonstration video.
+- Optional supporting documents.
+
+Validate the form and save the project to the database.
+
+Allow drafts and edits where supported.
+
+A submitted project should follow the configured Faculty review and approval workflow before public marketplace listing.
+
+# 12. DIRECT VIDEO UPLOAD — REQUIRED
+
+The Add New Project form must provide a direct video upload control.
+
+**Do not require a pasted video link.**
+
+## Frontend requirements
+
+- Choose Video / Upload Video button.
+- Select a video from the user's device.
+- Show filename and file size.
+- Validate format and maximum size.
+- Display actual upload progress and percentage where supported.
+- Show upload success or failure.
+- Allow retry and cancellation where supported.
+- Show a preview after upload.
+- Allow replacing or removing the selected video.
+- Allow project submission without a video when it is optional.
+
+## Backend requirements
+
+- Authenticate the uploader.
+- Verify upload permissions.
+- Validate the file type and size on the server.
+- Store the file in persistent storage.
+- Save file metadata and references in the database.
+- Return a valid file ID or authorized playback URL.
+- Link the video to the correct project.
+- Support authorized retrieval and streaming.
+- Avoid broken project records when uploads fail.
+- Clean up abandoned temporary uploads where appropriate.
+
+Do not store the permanent video reference only in frontend state.
+
+Use persistent development storage or configured object storage for deployment.
+
+# 13. FIX VIDEO PLAYBACK COMPLETELY
+
+The saved video must play after refresh and when the project is reopened.
+
+Inspect and fix:
+
+- Invalid file paths.
+- Broken URLs.
+- Incorrect MIME types.
+- Authentication failures.
+- CORS issues.
+- Storage permission problems.
+- Expired URLs.
+- Incorrect API responses.
+- Missing file records.
+
+Support MP4 files using H.264 video and AAC audio, and WebM where supported.
+
+Implement byte-range requests (`206 Partial Content`) when required by the streaming implementation.
+
+Provide:
+
+- Play and pause.
+- Seek.
+- Volume.
+- Fullscreen.
+- Loading state.
+- Retry.
+- Clear missing/unsupported-video errors.
+
+### Mandatory video test
+
+1. Select a valid local video.
+2. Upload it.
+3. Save the project.
+4. Refresh the page.
+5. Reopen the project.
+6. Play and seek through the same video.
+
+Do not use unrelated sample clips or fake URLs to hide errors.
+
+# 14. RUBRIC EVALUATOR
+
+Implement a working rubric-based evaluation system for Faculty.
+
+A Rubric Evaluator assesses a project or assignment against configurable criteria and provides a consistent score and feedback.
+
+Example criteria:
+
+| Criterion | Example weight |
+|---|---:|
+| Problem understanding | 15% |
+| Functionality and implementation | 25% |
+| Code quality and design | 15% |
+| Innovation and creativity | 15% |
+| Testing and validation | 15% |
+| Documentation and presentation | 15% |
+| Total | 100% |
+
+These are examples only. Authorized Faculty must be able to configure the criteria and weights.
+
+## Evaluation workflow
+
+1. Faculty selects an assigned project or assessment.
+2. Faculty selects a rubric.
+3. The application displays criteria and weights.
+4. Faculty enters scores and comments.
+5. The application calculates the weighted result.
+6. Faculty reviews the result.
+7. Faculty saves the evaluation.
+8. Scores and comments persist in the database.
+9. Faculty can reopen saved evaluations.
+10. Students see feedback only when it is published or otherwise permitted.
+
+For scores out of 10:
+
+`Criterion contribution = (Score / 10) × Criterion weight`
+
+Sum all contributions to calculate a score out of 100 when weights total 100%.
+
+Validate the score ranges and weight totals.
+
+Optional AI evaluation must be labelled as a suggestion. Faculty must approve the final grade. AI must not invent evidence or claim it executed code that it did not run.
+
+Do not leave a nonfunctional Rubric Evaluator tab.
+
+# 15. PROJECT REVIEWS AND APPROVAL
+
+Implement the workflow:
+
+Student submits project → Faculty reviews project → Faculty approves, rejects, or requests changes → Student receives status and feedback → Approved project becomes discoverable if permitted.
+
+Use consistent database statuses, for example:
+
+- Draft.
+- Submitted.
+- Under Review.
+- Approved.
+- Rejected.
+- Changes Requested.
+
+Enforce reviewer permissions and record review timestamps.
+
+# 16. PROJECT DISCOVERY, REQUESTS, AND LICENSING
+
+Clients can submit ideas and discover relevant approved projects.
+
+If matching is implemented:
+
+- Use actual database projects.
+- Match on skills, technology stack, description, budget, and deadlines where available.
+- Explain why a project matches.
+- Never invent students, projects, prices, or skills.
+- Do not expose private student data.
+
+If comparison is implemented, compare actual records using fields such as technologies, deliverables, price, and license terms.
+
+## Purchases and licensing
+
+- Display price and license terms clearly.
+- Store purchase orders in the database.
+- Track payment/order status.
+- Generate license records only after the configured workflow authorizes them.
+- Allow authorized downloads.
+- Respect project ownership and intellectual-property rights.
+
+If no payment gateway is configured, use a clearly labelled demo or pending-payment workflow. Never claim that real money was collected or that payment succeeded without provider confirmation.
+
+Do not claim to provide escrow unless a genuine, compliant escrow service is integrated.
+
+# 17. NOTICES AND COMPLAINTS
+
+## Notices
+
+Administrators can create, edit, publish, and delete notices.
+
+Deletion requires appropriate permission and a confirmation step.
+
+Faculty can manage notices only if authorized. Students and Clients can view notices intended for their roles.
+
+All changes must persist in the database.
+
+## Complaints
+
+Allow authorized users to submit complaints, view details, and track status.
+
+Use consistent statuses such as Open, In Progress, and Resolved.
+
+### Mark Resolved
+
+- Ask for confirmation.
+- Accept an optional resolution note.
+- Check backend authorization.
+- Update the database.
+- Record the authorized actor and timestamp.
+- Refresh the UI after success.
+- Show an error if the operation fails.
+
+Do not update the UI as if resolved when the backend update failed.
+
+# 18. ADMINISTRATOR DASHBOARD
+
+Keep it minimal and useful.
+
+Main navigation:
+
+- Dashboard.
+- User Management.
+- Project Moderation.
+- Notices.
+- Complaints.
+- Transactions.
+- Security Logs.
+- Settings.
+
+Display only real institutional statistics, such as:
+
+- User counts.
+- Pending Faculty approvals.
+- Projects awaiting review.
+- Unresolved complaints.
+- Purchase/order statuses.
+
+Remove Google AI Studio branding, AI model telemetry, and AI Studio Assistant from the Administrator interface.
+
+Implement user management, project moderation, branch management, notices, complaints, and appropriate audit logs.
+
+Do not allow public Administrator signup.
+
+# 19. ALL BRANCHES AND DEPARTMENTS
+
+The portal serves all configured institutional branches.
+
+- Do not hardcode Computer Engineering as the only branch.
+- Load branch records from the database or managed configuration.
+- Let authorized Administrators create, edit, activate, and deactivate branches.
+- Associate students, Faculty, attendance, projects, reviews, and reports with the appropriate branch.
+- Provide relevant filters.
+- Enforce branch and class permissions.
+
+Do not invent official branch names. Use existing configured records or provide an editable configuration.
+
+# 20. BACKWARD ARROW AND NAVIGATION
+
+Add a real left-facing arrow (`←`) in the header of relevant inner pages:
+
+- Add/Edit Project.
+- Project Details.
+- Video Preview.
+- Client Idea Studio.
+- Project Comparison.
+- Purchase Details.
+- Faculty My Students.
+- Student Details.
+- Attendance.
+- Project Reviews.
+- Complaints.
+- Profile and Settings subpages.
+
+The arrow must:
+
+- Navigate to the previous route where valid history exists.
+- Fall back to the appropriate parent page otherwise.
+- Preserve drafts and entered form data.
+- Preserve uploaded-file references.
+- Work with browser Back navigation.
+- Have an accessible Back label or tooltip.
+
+Every navigation tab must show its correct content and work after refresh.
+
+# 21. FIX API ERROR: HTML RECEIVED INSTEAD OF JSON
+
+Resolve errors such as:
+
+`Unexpected token '<', "<html><hea"... is not valid JSON`
+
+Inspect the actual failing request.
+
+Check:
+
+- API base URL.
+- Endpoint paths.
+- Backend route definitions.
+- Frontend route handling.
+- Development proxy.
+- Authentication redirects.
+- HTTP status and content type.
+- Backend logs.
+- CORS configuration.
+
+Fix the real cause instead of hiding the error.
+
+API endpoints must return valid JSON in the documented format. Check status and content type before parsing. Show a useful error if the response is unexpected.
+
+Do not substitute fake data or silently ignore failed requests.
+
+# 22. FIX NEW ACCOUNT DASHBOARDS
+
+After registration:
+
+1. Create the account.
+2. Assign the correct role.
+3. Create the required profile record.
+4. Apply the activation/approval workflow.
+5. Establish a secure session where appropriate.
+6. Navigate to the correct page.
+7. Load the user's actual records.
+8. Show useful empty states if there is no data.
+
+Do not render blank dashboards.
+
+Do not show another user's data or fabricated statistics.
+
+Test new accounts for every role, not only demo accounts.
+
+# 23. AI FEATURES — OPTIONAL AND HONEST
+
+If a Gemini API integration is configured, provide optional assistance for:
+
+- Understanding a client's project description.
+- Generating a concise project summary.
+- Suggesting potential features and technology stacks.
+- Asking clarifying questions.
+- Summarizing supporting documents when supported.
+- Generating a short demo script or storyboard when requested.
+
+Use the provider's actual supported model names and current API capabilities. Do not invent model identifiers or claim unsupported model features.
+
+Keep API keys on the backend.
+
+If the AI API is unavailable, rate-limited, or unconfigured:
+
+- Show a clear message.
+- Preserve the user's text.
+- Allow basic project submission to continue.
+- Do not show fake generated results.
+
+Speech-to-text and text-to-speech may use browser-native capabilities when supported. Request microphone permission only after the user chooses the microphone button. Provide a text alternative.
+
+Actual image generation, web search grounding, audio generation, or video generation must be implemented only if the chosen provider supports the capability and the required configuration is available.
+
+Do not pretend a storyboard is a generated video or a diagram is a high-resolution AI image.
+
+# 24. DATABASE STRUCTURE
+
+Create normalized database models and migrations for the features actually implemented, including:
+
+- Users.
+- Roles and permissions.
+- Branches/departments.
+- Student profiles.
+- Faculty profiles and assignments.
+- Client profiles.
+- Classes and batches.
+- Attendance.
+- Projects.
+- Project technologies and skills.
+- Project files and video metadata.
+- Project reviews.
+- Rubric templates and criteria.
+- Rubric evaluations and scores.
+- Project requests.
+- Applications or matching records where needed.
+- Conversations and messages.
+- Complaints and status history.
+- Notices and target audiences.
+- Purchase orders.
+- License records.
+- Audit logs.
+- User settings.
+
+Use foreign keys, constraints, appropriate indexes, and timestamps. Never store plaintext passwords.
+
+Seed demo accounts safely without deleting existing data.
+
+# 25. BACKEND API AND ERROR HANDLING
+
+Organize the backend into clear modules for authentication, users, branches, academic records, projects, uploads, reviews, rubrics, requests, messages, notices, complaints, and purchases.
+
+All APIs must:
+
+- Validate input.
+- Authenticate users where required.
+- Enforce permissions.
+- Return consistent JSON responses.
+- Use correct HTTP status codes.
+- Handle missing records.
+- Handle upload failures.
+- Handle external service failures.
+- Log diagnostics without exposing secrets.
+- Avoid fake successful responses.
+
+# 26. SECURITY AND PRIVACY
+
+Implement:
+
+- Secure password hashing.
+- Backend authorization.
+- File type and size validation.
+- Protected video retrieval.
+- Secure session handling.
+- Input validation.
+- Rate limiting for sensitive actions.
+- Protection against common injection and cross-site scripting vulnerabilities.
+- Restricted administrative operations.
+- Audit logging.
+- Environment-based secret management.
+
+Do not expose passwords, tokens, API keys, private messages, private student records, or unauthorized videos.
+
+# 27. TESTING
+
+Create and run tests for critical workflows.
+
+### Authentication
+
+- Signup works.
+- Login works.
+- Faculty demo login does not require OTP.
+- New accounts follow their configured activation rules.
+- Each role opens the correct dashboard.
+- Unauthorized access is blocked.
+
+### Faculty
+
+- My Students opens.
+- Add Student saves data.
+- Duplicate student IDs are rejected.
+- Branch and batch filtering works.
+- Attendance persists.
+- Project reviews persist.
+- Rubric scores calculate and reload correctly.
+
+### Client
+
+- Idea Studio has only Describe My Idea.
+- Drafts save and reopen.
+- Requests appear under My Requests.
+- Discover Projects shows real approved records.
+- Purchases show real order records.
+- Client navigation is minimal and distinct.
+
+### Video
+
+- Local video selection works.
+- Upload validation works.
+- Upload progress reflects actual upload progress where supported.
+- Video references persist.
+- Saved videos play after refresh.
+- Unauthorized access is blocked.
+
+### Administrator
+
+- User management works.
+- Branch configuration works.
+- Notices can be managed by authorized users.
+- Mark Resolved persists.
+- AI Studio branding and model telemetry are absent.
+
+### General
+
+- Backward arrows work.
+- Drafts survive navigation.
+- The HTML-as-JSON error is fixed.
+- Buttons perform real actions.
+- Loading, empty, and error states work.
+- No fake success messages appear.
+- The application is responsive.
+
+# 28. REQUIRED PROJECT DELIVERABLES
+
+Deliver a complete runnable source project containing:
+
+1. Frontend source code.
+2. Backend source code.
+3. Database models.
+4. Database migrations.
+5. Demo-account seed script.
+6. `.env.example`.
+7. Persistent file upload and playback implementation.
+8. API documentation.
+9. Automated tests.
+10. Installation instructions.
+11. Frontend and backend startup commands.
+12. Database initialization instructions.
+13. Deployment guide.
+14. Documentation of required external services and any unimplemented integrations.
+
+Include exact commands for installing dependencies, initializing the database, seeding demo accounts, running tests, and starting the application.
+
+# 29. BUILD AND DELIVERY INSTRUCTIONS
+
+Begin by creating the project structure, database schema, authentication, and working signup/login interface.
+
+Then implement the dashboards, student management, projects, uploads, rubric evaluation, requests, notices, complaints, messaging, and purchases.
+
+Connect every frontend page to its real backend endpoint and database operation.
+
+Run the application and tests available in the environment. Diagnose and fix errors rather than simply documenting them.
+
+If the environment cannot run a service or requires a missing API key, state that limitation precisely and provide setup instructions. Never claim an untested feature works.
+
+Do not stop after creating a plan, a static UI, or a few disconnected pages.
+
+## Final acceptance criteria
+
+The finished application must be a secure, responsive, professional, full-stack **Alwar Polytechnic Student Talent Management Portal** with:
+
+- A working authentication-first entry page.
+- Four role-specific dashboards.
+- Support for all configured branches.
+- Functional Faculty student listing and Add Student workflow.
+- Persistent projects and project approvals.
+- Direct video upload and playback after refresh.
+- A simple Client Idea Studio with no unnecessary workflow tabs.
+- A real Rubric Evaluator.
+- Functional notices and complaints.
+- Correct Back navigation.
+- Reliable APIs and JSON responses.
+- Persistent database records.
+- Honest AI and external-service configuration.
+- Working installation, testing, and deployment documentation.
+
+**Implement the complete application from start to finish. Prioritize actual functionality, data integrity, usability, security, and testing over decorative effects or unnecessary features.**
